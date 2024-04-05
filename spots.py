@@ -34,10 +34,10 @@ st.pyplot(fig1)
 
 '''Approx 11 years cycle ---> approx 132 months cycle'''
 fig2=plt.figure(figsize=(28,6))
-plt.plot(sunspots)            # The whole data
-plt.plot(sunspots[:72])       # Data from 1749, actual cycles started from 1755 --> 6 years means 72 months
-plt.plot(sunspots[72:72+132]) # Showing the first cycle
-plt.plot(sunspots[-13:])      # Displaying the current cycle
+plt.plot(sunspots)           
+plt.plot(sunspots[:72])       
+plt.plot(sunspots[72:72+132]) 
+plt.plot(sunspots[-13:])      
 plt.ylabel(data.columns[-1], fontsize = 12, color = 'm')
 plt.xlabel("Months from Jan 1749 to Jan 2021", fontsize = 12, color = 'm')
 plt.title("Understanding the Sunspots data", fontsize = 18, color = 'r', weight = 'bold')
@@ -48,7 +48,7 @@ st.pyplot(fig2)
 
 
 
-# Some changes for a better visualization of solar cycles
+
 '''Collect all the years from 1755 to 2019 and use it as xticklabels'''
 years = []
 start = 1755
@@ -67,7 +67,7 @@ plt.show()
 st.pyplot(fig3)
 
 
-# Visualise the variation in the data distribution along with the outliers in the time series data
+
 fig3=plt.figure(figsize = (15,6))
 plt.subplot(2, 1, 1)
 sns.distplot(sunspots)
